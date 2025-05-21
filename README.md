@@ -1,1 +1,1 @@
-# expense-tracker
+# React + TypeScript + Vite + Tailwind CSS
