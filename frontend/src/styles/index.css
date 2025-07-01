@@ -1,0 +1,8 @@
+@import "tailwindcss";
+
+@import './theme.css';
+
+@import './utilities/animations.css';
+@import './utilities/sideBar.css';
+@import './utilities/calendar.css';
+
