@@ -1,0 +1,16 @@
+@layer utilities {
+    .calendar-days > .tracked:nth-child(7n),
+    .calendar-days > .tracked:nth-child(7n + 1) {
+        @apply bg-blue-50;
+        @apply text-gray-600;
+        @apply hover:bg-blue-600;
+        @apply hover:text-white;
+    }
+
+    .calendar-days > .tracked.isActive:nth-child(7n),
+    .calendar-days > .tracked.isActive:nth-child(7n + 1),
+    .calendar-days .isActive {
+        @apply bg-blue-600 text-white hover:bg-blue-500;
+    }
+
+}
