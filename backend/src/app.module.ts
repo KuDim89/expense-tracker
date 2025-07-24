@@ -1,21 +1,25 @@
 import { Module } from '@nestjs/common'
 import { ConfigModule } from '@nestjs/config'
 
-import config from '../config/configuration'
-import { validationSchema } from '../env.local.validation'
+import { IS_DEV_ENV } from '@/libs/common/utils/is-dev.util'
+
 import { AppController } from './app.controller'
 import { AppService } from './app.service'
+import { PrismaModule } from './prisma/prisma.module'
+import { AuthModule } from './auth/auth.module';
+import { UserModule } from './user/user.module';
 
 @Module({
 	controllers: [AppController],
 	imports: [
 		ConfigModule.forRoot({
 			cache: true,
-			envFilePath: ['.env.local'],
-			isGlobal: true,
-			load: [config],
-			validationSchema
-		})
+			ignoreEnvFile: !IS_DEV_ENV,
+			isGlobal: true
+		}),
+		PrismaModule,
+		AuthModule,
+		UserModule
 	],
 	providers: [AppService]
 })

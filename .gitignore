@@ -32,3 +32,6 @@ yarn-error.log*
 
 # Yarn lock
 tmp
+
+# Prisma auto generated
+backend/prisma/__generated__

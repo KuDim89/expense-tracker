@@ -13,6 +13,9 @@ export default tseslint.config(
   ...tseslint.configs.recommendedTypeChecked,
   eslintPluginPrettierRecommended,
   {
+		parserOptions: {
+			project: './tsconfig.json',
+		},
     plugins: {
       perfectionist,
     },

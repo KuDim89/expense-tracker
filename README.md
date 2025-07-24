@@ -17,3 +17,8 @@
 - ### Backend
 
 1. Nest.js
+2. Docker
+3. Redis
+4. Prisma ORM
+5. Express session
+6. Cookie parser
